@@ -1,0 +1,154 @@
+<html>
+    <head>
+        <title>React</title>
+        <!-- 引入react -->
+        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <!-- 引入react-dom -->
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+        <!-- 引入Babel,使浏览器可以识别JSX语法，如果不使用JSX语法，可以不引入 -->
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    </head>
+    <body>
+        <div id="app"></div>
+        <script type="text/babel">
+        // 必须添加type="text/babel",否则不识别JSX语法
+        class App extends React.Component {
+            constructor (){
+                super ();
+                this.state = {
+                    username:"",
+                    email: "",
+                    password: ""
+                }
+            }
+            usernameChange = (event) => {
+                this.setState({
+                    username: event.target.value
+                })
+            }
+            passwordChange = (event) => {
+                this.setState({
+                    password: event.target.value
+                })
+            }
+            emailChange = (event) => {
+                this.setState({
+                    email: event.target.value
+                })
+            }
+            mysqlselectall = () => {              
+                window.location.href = 'http://localhost:8080/springmysqlselectall'
+            }   
+            mysqlselect = () => {              
+                var url = 'http://localhost:8080/springmysqlselect?username='
+                var name = this.state.username
+                window.location.href = url+name   
+            }                    
+            mysqladd = () =>{
+                console.log(this.state.username + this.state.password + this.state.email + 'Successful');
+                axios.post('http://localhost:8080/springmysqlinsert',{
+                    username: this.state.username,
+                    email: this.state.email,
+                    password: this.state.password                    
+                });
+            }
+            mysqldelete = () => {
+                var url = 'http://localhost:8080/springmysqldelete?username='
+                var name = this.state.username
+                window.location.href = url + name
+            }
+            mysqlupdate = () => {
+                console.log(this.state.username + this.state.email + 'Successful');
+                axios.post('http://localhost:8080/springmysqlupdate',{
+                    username: this.state.username,
+                    email: this.state.email
+                });
+            }
+            nodejsselectall = () => {
+                window.location.href = 'http://localhost:8080/nodejsselectall'
+            } 
+
+            nodejsselect = () => {
+                var url = 'http://localhost:8080/nodejsselect?username='
+                var name = this.state.username
+                window.location.href = url+name
+            }
+            nodejsdelete = () => {
+                var url = 'http://localhost:8080/nodejsdelete?username='
+                var name = this.state.username
+                window.location.href = url+name
+            }
+            nodejsadd = () =>{
+                console.log(this.state.username + this.state.password + this.state.email + 'Successful');
+                axios.post('http://localhost:8080/nodejsinsert',{
+                    username: this.state.username,
+                    email: this.state.email,
+                    password: this.state.password                    
+                });
+            }
+            nodejsupdate = () =>{
+                console.log(this.state.username + this.state.email + 'Successful');
+                axios.post('http://localhost:8080/nodejsupdate',{
+                    username: this.state.username,
+                    email: this.state.email                   
+                });
+            }
+            mongoselectall = () => {
+                window.location.href = 'http://localhost:8080/mongoselectall'
+            }
+            mongoselect = () => {
+                var url = 'http://localhost:8080/mongoselect?username='
+                var name = this.state.username
+                window.location.href = url+name
+            }
+            mongodelete = () => {
+                var url = 'http://localhost:8080/mongodelete?username='
+                var name = this.state.username
+                window.location.href = url+name
+            }
+            mongoadd = () => {
+                axios.post('http://localhost:8080/mongoinsert',{
+                    username: this.state.username,
+                    email: this.state.email,
+                    password: this.state.password                    
+                });
+            } 
+            mongoupdate = () => {
+                axios.post('http://localhost:8080/mongoupdate',{
+                    username: this.state.username,
+                    email: this.state.email,
+                    password: this.state.password                    
+                });
+            }           
+
+            render() {
+                return(
+                    <div>
+                        <h1>Hello World!</h1>
+                        <label>Username: </label><input ref = "username" onChange = {this.usernameChange} id = "textfield1" type = "text" /><br></br>
+                        <label>Email: </label><input ref = "email" onChange = {this.emailChange} id = "textfield2" type = "text" /><br></br>
+                        <label>Password: </label><input ref = "password" onChange = {this.passwordChange} id = "textfield3" type = "text" /><br></br>
+                        <button onClick={this.mysqladd}> Add User</button><br></br>
+                        <button onClick={this.mysqldelete}> Delete User </button><br></br>
+                        <button onClick={this.mysqlupdate}> Update User </button><br></br>
+                        <button onClick={this.mysqlselect}> Select User </button><br></br>
+                        <button onClick={this.mysqlselectall}> Select All </button><br></br>
+                        <button onClick={this.nodejsselectall}> Nodejs Select All </button><br></br>
+                        <button onClick={this.nodejsselect}> Nodejs Select User </button><br></br>
+                        <button onClick={this.nodejsadd}> Nodejs Add User </button><br></br>
+                        <button onClick={this.nodejsdelete}> Nodejs Delete User </button><br></br>
+                        <button onClick={this.nodejsupdate}> Nodejs Update User </button><br></br>
+                        <button onClick={this.mongoselectall}> Mongo SelectAll </button><br></br>
+                        <button onClick={this.mongoselect}> Mongo Select </button><br></br>
+                        <button onClick={this.mongodelete}> Mongo Delete </button><br></br>
+                        <button onClick={this.mongoadd}> Mongo Add </button><br></br>
+                        <button onClick={this.mongoupdate}> Mongo Update </button><br></br>
+                    </div>
+                )
+            }
+        }
+        ReactDOM.render(<App/>, document.getElementById('app'))
+        </script>
+    </body>
+</html> 
