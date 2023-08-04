@@ -69,32 +69,32 @@
    ![image](https://github.com/zodiacie/FullStack/assets/57634982/f77d5133-d739-435c-9c63-6b92a1dd9333)
    此时浏览器访问就成功了！
    ![image](https://github.com/zodiacie/FullStack/assets/57634982/2ca20828-f36e-4832-899e-8cf58a2a866a)
-1) Go to 'src' folder and create 'Controller' 'Service' 'Dao' 'Module' folders
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/39863326-b49e-4dea-8e20-baf96d95ef22)
-2) 'Module' is for database relational table field name and setup "Get/Set"
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/cb04215f-c58f-4723-987a-8b36fbff3710)
-3) 'Dao' setup sql CRUD functionality with @Mapper and @Component  
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/94312ef2-6ea3-498b-9589-6e604fe2fc4e)
-4) Go to Resource folder and open 'application.properties' file to setup Database connection and Mapper xml file
-  ![image](https://github.com/zodiacie/FullStack/assets/57634982/d37641a1-3bf7-4c7b-ba48-7de2146618ab)
-5) Create 'Mapper' folder and xml file to mapping Dao sql CRUD functionality.
-  Add @Mapper annotation for MyBatis xml scan.
-  ![image](https://github.com/zodiacie/FullStack/assets/57634982/55108d76-cc8a-4b86-9eae-5854dbe8c460)
-6) 'Service' setup business logic for retrieving the data from 'Dao' module  
-  ![image](https://github.com/zodiacie/FullStack/assets/57634982/097ad34e-56dd-4ab8-a89c-0982f6ff1a90)
-  Add @Service("MysqlService") annotation https://blog.csdn.net/BAStriver/article/details/103671096  
-  最常用的就是这种直接用@AutoWire的方式了：  
-  ![image](https://github.com/zodiacie/FullStack/assets/57634982/c92d81d9-2b68-4cd6-9924-5b7e4dc3533f)
-  还有，这种简单的方式也是可以的。  
-  ![image](https://github.com/zodiacie/FullStack/assets/57634982/86fe232a-75f3-4c27-9cbd-eac76b03f06a)
-  当我们用一个interface对应多个实现类，然后注入的时候可以这样指定一个@Service("")  
-  ![image](https://github.com/zodiacie/FullStack/assets/57634982/7c413b55-bffd-4ca7-bae6-5a2264b32f0b)
-  也可以用@Resource来注入：  
-  ![image](https://github.com/zodiacie/FullStack/assets/57634982/e0887702-4381-4b69-a234-c12e8a75b961)
-7) 'Controller' setup interface with frontend react.js file to interact data.  
-  ![image](https://github.com/zodiacie/FullStack/assets/57634982/8e951a84-6b33-4a8e-9179-561832fd214c)
-8) Main application file has to add @MapperScan to map 'Dao' module.  
-  ![image](https://github.com/zodiacie/FullStack/assets/57634982/3e273114-6089-4903-abeb-5f43c83ead7f)
+10) Go to 'src' folder and create 'Controller' 'Service' 'Dao' 'Module' folders
+    ![image](https://github.com/zodiacie/FullStack/assets/57634982/39863326-b49e-4dea-8e20-baf96d95ef22)
+11) 'Module' is for database relational table field name and setup "Get/Set"
+    ![image](https://github.com/zodiacie/FullStack/assets/57634982/cb04215f-c58f-4723-987a-8b36fbff3710)
+12) 'Dao' setup sql CRUD functionality with @Mapper and @Component  
+    ![image](https://github.com/zodiacie/FullStack/assets/57634982/94312ef2-6ea3-498b-9589-6e604fe2fc4e)
+13) Go to Resource folder and open 'application.properties' file to setup Database connection and Mapper xml file
+    ![image](https://github.com/zodiacie/FullStack/assets/57634982/d37641a1-3bf7-4c7b-ba48-7de2146618ab)
+14) Create 'Mapper' folder and xml file to mapping Dao sql CRUD functionality.
+    Add @Mapper annotation for MyBatis xml scan.
+    ![image](https://github.com/zodiacie/FullStack/assets/57634982/55108d76-cc8a-4b86-9eae-5854dbe8c460)
+15)  'Service' setup business logic for retrieving the data from 'Dao' module  
+    ![image](https://github.com/zodiacie/FullStack/assets/57634982/097ad34e-56dd-4ab8-a89c-0982f6ff1a90)
+    Add @Service("MysqlService") annotation https://blog.csdn.net/BAStriver/article/details/103671096   
+    最常用的就是这种直接用@AutoWire的方式了：  
+    ![image](https://github.com/zodiacie/FullStack/assets/57634982/c92d81d9-2b68-4cd6-9924-5b7e4dc3533f)
+    还有，这种简单的方式也是可以的。  
+    ![image](https://github.com/zodiacie/FullStack/assets/57634982/86fe232a-75f3-4c27-9cbd-eac76b03f06a)
+    当我们用一个interface对应多个实现类，然后注入的时候可以这样指定一个@Service("")  
+    ![image](https://github.com/zodiacie/FullStack/assets/57634982/7c413b55-bffd-4ca7-bae6-5a2264b32f0b)
+    也可以用@Resource来注入：  
+    ![image](https://github.com/zodiacie/FullStack/assets/57634982/e0887702-4381-4b69-a234-c12e8a75b961)
+16) 'Controller' setup interface with frontend react.js file to interact data.  
+    ![image](https://github.com/zodiacie/FullStack/assets/57634982/8e951a84-6b33-4a8e-9179-561832fd214c)
+17) Main application file has to add @MapperScan to map 'Dao' module.  
+    ![image](https://github.com/zodiacie/FullStack/assets/57634982/3e273114-6089-4903-abeb-5f43c83ead7f)
 
 <a name = "nodejs">NodeJS</a>
 1) Install Nodejs from official website.  
