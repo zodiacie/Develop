@@ -90,7 +90,7 @@
     还有，这种简单的方式也是可以的。  
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/86fe232a-75f3-4c27-9cbd-eac76b03f06a)
     当我们用一个interface对应多个实现类，然后注入的时候可以这样指定一个@Service("")  
-    ![image](https://github.com/zodiacie/FullStack/assets/57634982/7c413b55-bffd-4ca7-bae6-5a2264b32f0b)
+    ![image](https://github.com/zodiacie/FullStack/assets/57634982/8dd5768f-e231-42a2-9ac7-77be450158c2)
     也可以用@Resource来注入：  
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/e0887702-4381-4b69-a234-c12e8a75b961)
 17) 'Controller' setup interface with frontend react.js file to interact data.  
