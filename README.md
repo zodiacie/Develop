@@ -128,6 +128,7 @@
 
 <a name = "reactjs">ReactJS</a>
 1) Input following dependencies directly in React.js file
+   ![image](https://github.com/zodiacie/FullStack/assets/57634982/835fc969-d88c-40fe-ba44-abfee74d7cd4)
 ```
 <!-- 引入react -->
 <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
@@ -137,7 +138,6 @@
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.19.2/axios.min.js"></script>
 ```
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/835fc969-d88c-40fe-ba44-abfee74d7cd4)
 
 <a name = "mysql">MySQL Setup</a>
 1) Install MySQL and MySQL WorkBench from Official Website
