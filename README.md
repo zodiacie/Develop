@@ -42,45 +42,47 @@
    根据你的业务需要，你需要完善你的项目。
    在这里我就添加一个controller，并且运行作为演示：
    ![image](https://github.com/zodiacie/FullStack/assets/57634982/70dab6bf-47ef-4523-8f26-810c802cc45c)
-   package com.example.demo.controller;
-   import java.util.HashMap;
-   import java.util.Map;
-   import org.springframework.web.bind.annotation.RequestMapping;
-   import org.springframework.web.bind.annotation.RestController;
-   @RestController
-   @RequestMapping("/admin")
-   public class Controller {  
-     @RequestMapping("/test")
-     public Map<String,Object> test(){
+   ```
+   package com.example.demo.controller;  
+   import java.util.HashMap;  
+   import java.util.Map;  
+   import org.springframework.web.bind.annotation.RequestMapping;  
+   import org.springframework.web.bind.annotation.RestController;  
+   @RestController  
+   @RequestMapping("/admin")  
+   public class Controller {    
+     @RequestMapping("/test")  
+     public Map<String,Object> test(){  
        Map<String,Object> map=new HashMap<>();
        map.put("msg", "访问成功！");
        return map;
      }
    }
-   设置的请求路径为："/admin/test"
-   不要忘记了配置端口信息：在resource目录下有一个application.properties文件(使用yml的话，将后缀改为yml即可)，直接配置：
-   server.port=8080
-   此时请求路径为：http://localhost:8080/admin/test
-   打开启动类：DemoApplication.java会发现main方法上有run|debug，点击run即可运行了。
+   ```
+   设置的请求路径为："/admin/test"  
+   不要忘记了配置端口信息：在resource目录下有一个application.properties文件(使用yml的话，将后缀改为yml即可)，直接配置：  
+   server.port=8080  
+   此时请求路径为：http://localhost:8080/admin/test  
+   打开启动类：DemoApplication.java会发现main方法上有run|debug，点击run即可运行了。  
    ![image](https://github.com/zodiacie/FullStack/assets/57634982/3189e37a-fea1-4465-8eee-1624f6ebe9d3)
-   如果没有run|Debug怎么办？点击右上角的三角就会出来了：此操作会创建一个Tagert目录，即调试目录。
+   如果没有run|Debug怎么办？点击右上角的三角就会出来了：此操作会创建一个Tagert目录，即调试目录。  
    ![image](https://github.com/zodiacie/FullStack/assets/57634982/35f6cf5c-c4a8-43ad-ae97-8fac92a192b1)
-   运行过程：
+   运行过程：  
    ![image](https://github.com/zodiacie/FullStack/assets/57634982/f77d5133-d739-435c-9c63-6b92a1dd9333)
-   此时浏览器访问就成功了！
+   此时浏览器访问就成功了！  
    ![image](https://github.com/zodiacie/FullStack/assets/57634982/2ca20828-f36e-4832-899e-8cf58a2a866a)
-10) Go to 'src' folder and create 'Controller' 'Service' 'Dao' 'Module' folders
+11) Go to 'src' folder and create 'Controller' 'Service' 'Dao' 'Module' folders
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/39863326-b49e-4dea-8e20-baf96d95ef22)
-11) 'Module' is for database relational table field name and setup "Get/Set"
+12) 'Module' is for database relational table field name and setup "Get/Set"
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/cb04215f-c58f-4723-987a-8b36fbff3710)
-12) 'Dao' setup sql CRUD functionality with @Mapper and @Component  
+13) 'Dao' setup sql CRUD functionality with @Mapper and @Component  
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/94312ef2-6ea3-498b-9589-6e604fe2fc4e)
-13) Go to Resource folder and open 'application.properties' file to setup Database connection and Mapper xml file
+14) Go to Resource folder and open 'application.properties' file to setup Database connection and Mapper xml file
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/d37641a1-3bf7-4c7b-ba48-7de2146618ab)
-14) Create 'Mapper' folder and xml file to mapping Dao sql CRUD functionality.
+15) Create 'Mapper' folder and xml file to mapping Dao sql CRUD functionality.
     Add @Mapper annotation for MyBatis xml scan.
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/55108d76-cc8a-4b86-9eae-5854dbe8c460)
-15)  'Service' setup business logic for retrieving the data from 'Dao' module  
+16)  'Service' setup business logic for retrieving the data from 'Dao' module  
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/097ad34e-56dd-4ab8-a89c-0982f6ff1a90)
     Add @Service("MysqlService") annotation https://blog.csdn.net/BAStriver/article/details/103671096   
     最常用的就是这种直接用@AutoWire的方式了：  
@@ -91,9 +93,9 @@
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/7c413b55-bffd-4ca7-bae6-5a2264b32f0b)
     也可以用@Resource来注入：  
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/e0887702-4381-4b69-a234-c12e8a75b961)
-16) 'Controller' setup interface with frontend react.js file to interact data.  
+17) 'Controller' setup interface with frontend react.js file to interact data.  
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/8e951a84-6b33-4a8e-9179-561832fd214c)
-17) Main application file has to add @MapperScan to map 'Dao' module.  
+18) Main application file has to add @MapperScan to map 'Dao' module.  
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/3e273114-6089-4903-abeb-5f43c83ead7f)
 
 <a name = "nodejs">NodeJS</a>
