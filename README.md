@@ -158,7 +158,7 @@
 5) Setup Username and Password
    ![image](https://github.com/zodiacie/FullStack/assets/57634982/f0d60110-108c-4626-8dcb-316cdced22ba)
 6) Connect to the created connection and click on "Create Database"
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/7fc47bb2-d0b5-4331-9785-63c0ad8cf90d)
+   ![image](https://github.com/zodiacie/FullStack/assets/57634982/d5fb5bba-47a3-45ed-bd38-d52b3d9c79ed)
 7) Then click on "Create Collection"
    ![image](https://github.com/zodiacie/FullStack/assets/57634982/b5f5eb4b-d50c-4cb9-8055-89d927955f46)
 8) Click on "Add Data" to insert document.
