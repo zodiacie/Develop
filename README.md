@@ -14,6 +14,7 @@
 [ReactJS](#reactjs)  
 [MySQL Setup](#mysql)  
 [MongoDB Setup](#mongo)  
+[Bitcoin Setup](#bitcoin)
 
 <a name = "springboot">SpringBoot Setup</a>  
 1) VSCode 里安装Java Extension Pack和Spring Boot Extension Pack
@@ -163,6 +164,37 @@
    ![image](https://github.com/zodiacie/FullStack/assets/57634982/b5f5eb4b-d50c-4cb9-8055-89d927955f46)
 8) Click on "Add Data" to insert document.
    ![image](https://github.com/zodiacie/FullStack/assets/57634982/6ca7698b-9dd7-4ec8-b140-334d111e732c)
+
+<a name = "bitcoin">Bitcoin Private Chain Setup</a>
+1) 比特币区块链是两遍SHA256的Hash算法
+   https://learnku.com/python/t/22970/build-your-own-block-chain-step-by-step-with-python
+   ![image](https://github.com/zodiacie/FullStack/assets/57634982/b15cd35d-6f0d-4a70-a36a-c20524e79918)
+   ![image](https://github.com/zodiacie/FullStack/assets/57634982/5d86f544-976f-443a-b8a3-594e9c7506f7)
+   ![image](https://github.com/zodiacie/FullStack/assets/57634982/fb978539-01b2-4b3a-8c66-841fc0cf9f57)
+   ![image](https://github.com/zodiacie/FullStack/assets/57634982/f51ef9fe-e8b3-48d9-9148-1fa69274fbd6)
+   ![image](https://github.com/zodiacie/FullStack/assets/57634982/1fb55f62-f653-4c04-9791-43eba51d95bc)
+   ![image](https://github.com/zodiacie/FullStack/assets/57634982/f6f22110-2814-4313-97c4-6eb36be3ceba)
+   ![image](https://github.com/zodiacie/FullStack/assets/57634982/8f261512-53ed-49e0-8190-258f6bc00d8c)
+   ![image](https://github.com/zodiacie/FullStack/assets/57634982/a576828a-539e-4c83-a040-2f5127c347b3)
+   ![image](https://github.com/zodiacie/FullStack/assets/57634982/09a44eb2-6329-444b-bfb6-4a692ab669e5)
+   ![image](https://github.com/zodiacie/FullStack/assets/57634982/e822fd29-4adc-40cf-8da9-5c173237f184)
+   ![image](https://github.com/zodiacie/FullStack/assets/57634982/a5b18155-c7c3-4b65-a284-2a515a0a46cd)
+   ![image](https://github.com/zodiacie/FullStack/assets/57634982/97f68235-bb88-471c-b01a-de5493101027)
+   ![image](https://github.com/zodiacie/FullStack/assets/57634982/d7e5268c-8181-4138-8899-0597cc54d46c)
+   ![image](https://github.com/zodiacie/FullStack/assets/57634982/cc0df12d-3b96-4c19-9cf2-fafdca54bfc4)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
