@@ -12,7 +12,7 @@
 [SpringBoot](#springboot)  
 [NodeJS](#nodejs)
 
-<a name = "springboot">SpringBoot Setup</a>
+<a name = "springboot">SpringBoot Setup</a>  
 1)VSCode 里安装Java Extension Pack和Spring Boot Extension Pack
   ![image](https://github.com/zodiacie/FullStack/assets/57634982/12e9793f-f80b-45ca-ac89-f2ed3f1beab6)
   ![image](https://github.com/zodiacie/FullStack/assets/57634982/fd59fba5-49c3-402d-be36-268853a4ca2b)
