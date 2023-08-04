@@ -1,4 +1,4 @@
-![image](https://github.com/zodiacie/FullStack/assets/57634982/2f15df84-a489-4729-93d1-8d86a1e76835)# FullStack
+# FullStack
 电商实战项目   
 1.NewBee电商 https://github.com/newbee-ltd/newbee-mall  
 2.Swarm微服务 https://github.com/macrozheng/mall-swarm  
