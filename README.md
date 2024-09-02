@@ -158,10 +158,10 @@
    -e MYSQL_ROOT_PASSWORD=root \
    -d mysql:5.7
 
-   docker exec -it mysql(docker name) bash
-   mysql -u user -p
-   enter password: root.
-   SHOW DATABASES;
+   docker exec -it mysql(docker name) bash \
+   mysql -u user -p \
+   enter password: root. \
+   SHOW DATABASES; \
 
 <a name = "mongo">MongoDB Setup</a>
 1) Install MongoDB and MongoDB Compass from Official Website
