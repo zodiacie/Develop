@@ -150,6 +150,18 @@
    ![image](https://github.com/zodiacie/FullStack/assets/57634982/92c59042-beb1-46a4-aaea-859d3c1c5301)
 5) Create Table and Fields from Database GUI.
    ![image](https://github.com/zodiacie/FullStack/assets/57634982/ceb1d30a-cb91-4286-9b15-5d67a3d8a817)
+6) Create MySQL from docker image
+   docker run -p 3306:3306 --name mysql \
+   -v /mydata/mysql/log:/var/log/mysql \
+   -v /mydata/mysql/data:/var/lib/mysql \
+   -v /mydata/mysql/conf:/etc/mysql/conf.d \
+   -e MYSQL_ROOT_PASSWORD=root \
+   -d mysql:5.7
+
+   docker exec -it mysql(docker name) bash
+   mysql -u user -p
+   enter password: root.
+   SHOW DATABASES;
 
 <a name = "mongo">MongoDB Setup</a>
 1) Install MongoDB and MongoDB Compass from Official Website
