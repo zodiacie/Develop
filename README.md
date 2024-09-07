@@ -2,6 +2,7 @@
 [SpringBoot](#springboot)  
 [MySQL Setup](#mysql)  
 [MongoDB Setup](#mongo)  
+[ReactJS](#reactjs)  
 
 <a name = "springboot">SpringBoot Setup</a>  
 1) VSCode 里安装Java Extension Pack和Spring Boot Extension Pack
@@ -126,3 +127,15 @@
 8) Click on "Add Data" to insert document.
    ![image](https://github.com/zodiacie/FullStack/assets/57634982/6ca7698b-9dd7-4ec8-b140-334d111e732c)
 
+<a name = "reactjs">ReactJS</a>
+1) Input following dependencies directly in React.js file
+   ![image](https://github.com/zodiacie/FullStack/assets/57634982/835fc969-d88c-40fe-ba44-abfee74d7cd4)
+```
+<!-- 引入react -->
+<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+<!-- 引入react-dom -->
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+<!-- 引入Babel,使浏览器可以识别JSX语法，如果不使用JSX语法，可以不引入 -->
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.19.2/axios.min.js"></script>
+```
