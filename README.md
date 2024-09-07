@@ -107,7 +107,7 @@
    -d mysql:5.7
 
    docker exec -it mysql(docker name) bash \
-   mysql -u user -p \
+   mysql -u root -p \
    enter password: root. \
    SHOW DATABASES; \
 
