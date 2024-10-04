@@ -1,8 +1,14 @@
 目录:  
+[JDK Setup](#jdksetup)  
 [SpringBoot](#springboot)  
 [MySQL Setup](#mysql)  
 [MongoDB Setup](#mongo)  
 [ReactJS](#reactjs)  
+
+<a name = "jdksetup">JDK Setup</a>  
+1) Remove JDK: sudo apt-get purge (JDK name: openjdk-11-jre:amd64)
+2) Check JDK list: sudo dpkg --list | grep -i jdk
+3) 
 
 <a name = "springboot">SpringBoot Setup</a>  
 1) VSCode 里安装Java Extension Pack和Spring Boot Extension Pack
