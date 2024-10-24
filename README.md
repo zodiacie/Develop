@@ -9,8 +9,6 @@
 1) Remove JDK: sudo apt-get purge (JDK name: openjdk-11-jre:amd64)  
 2) Check JDK list: sudo dpkg --list | grep -i jdk  
 3) Install JDK: sudo apt install openjdk-17-jdk  
-4) 
-
 
 <a name = "springboot">SpringBoot Setup</a>  
 1) VSCode 里安装Java Extension Pack和Spring Boot Extension Pack
