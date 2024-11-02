@@ -95,6 +95,13 @@
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/8e951a84-6b33-4a8e-9179-561832fd214c)
 18) Main application file has to add @MapperScan to map 'Dao' module.  
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/3e273114-6089-4903-abeb-5f43c83ead7f)
+19) Connect MySQL from docker container with following codes in "application.properties" files.  
+    ![image](https://github.com/user-attachments/assets/81979e14-7ed3-4251-90d7-43f57ab9b292)
+    Get into Docker container of MySQL bash  
+    docker exec -it mysql(docker name) bash \  
+    mysql -u root -p \  
+    enter password: root. \  
+    SHOW DATABASES; \  
 
 <a name = "mysql">MySQL Setup</a>
 1) Install MySQL and MySQL WorkBench from Official Website
@@ -112,10 +119,7 @@
    -e MYSQL_ROOT_PASSWORD=root \
    -d mysql:5.7
 
-   docker exec -it mysql(docker name) bash \
-   mysql -u root -p \
-   enter password: root. \
-   SHOW DATABASES; \
+   
 
 <a name = "mongo">MongoDB Setup</a>
 1) Install MongoDB and MongoDB Compass from Official Website
