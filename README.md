@@ -166,7 +166,7 @@
        </update> 
     </mapper>
     ```
-20)  'Service' setup business logic for retrieving the data from 'Dao' module  
+20) 'Service' setup business logic for retrieving the data from 'Dao' module  
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/097ad34e-56dd-4ab8-a89c-0982f6ff1a90)
     ```
     import com.example.demo.Dao.UsersDao;
