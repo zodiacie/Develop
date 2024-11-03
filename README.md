@@ -73,14 +73,33 @@
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/39863326-b49e-4dea-8e20-baf96d95ef22)
 12) 'Module' is for database relational table field name and setup "Get/Set"
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/cb04215f-c58f-4723-987a-8b36fbff3710)
-13) 'Dao' setup sql CRUD functionality with @Mapper and @Component  
+    ```
+    package com.example.demo.Dao;
+    import com.example.demo.Pojo.Users;
+    import org.apache.ibatis.annotations.Select;
+    import org.apache.ibatis.annotations.Insert;
+    import org.apache.ibatis.annotations.Update;
+    import org.apache.ibatis.annotations.Delete;
+    import org.apache.ibatis.annotations.Param;
+    import org.apache.ibatis.annotations.Mapper;
+    import org.springframework.stereotype.Component;
+    import java.util.List;
+
+    @Component
+    @Mapper
+    public interface UsersDao {
+       //@Select("SELECT * FROM USERS")
+       List<Users> selectAll();    
+    }
+    ```
+14) 'Dao' setup sql CRUD functionality with @Mapper and @Component  
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/94312ef2-6ea3-498b-9589-6e604fe2fc4e)
-14) Go to Resource folder and open 'application.properties' file to setup Database connection and Mapper xml file
+15) Go to Resource folder and open 'application.properties' file to setup Database connection and Mapper xml file
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/d37641a1-3bf7-4c7b-ba48-7de2146618ab)
-15) Create 'Mapper' folder and xml file to mapping Dao sql CRUD functionality.
+16) Create 'Mapper' folder and xml file to mapping Dao sql CRUD functionality.
     Add @Mapper annotation for MyBatis xml scan.
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/55108d76-cc8a-4b86-9eae-5854dbe8c460)
-16)  'Service' setup business logic for retrieving the data from 'Dao' module  
+17)  'Service' setup business logic for retrieving the data from 'Dao' module  
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/097ad34e-56dd-4ab8-a89c-0982f6ff1a90)
     Add @Service("MysqlService") annotation https://blog.csdn.net/BAStriver/article/details/103671096   
     最常用的就是这种直接用@AutoWire的方式了：  
@@ -91,11 +110,11 @@
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/8dd5768f-e231-42a2-9ac7-77be450158c2)
     也可以用@Resource来注入：  
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/e0887702-4381-4b69-a234-c12e8a75b961)
-17) 'Controller' setup interface with frontend react.js file to interact data.  
+18) 'Controller' setup interface with frontend react.js file to interact data.  
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/8e951a84-6b33-4a8e-9179-561832fd214c)
-18) Main application file has to add @MapperScan to map 'Dao' module.  
+19) Main application file has to add @MapperScan to map 'Dao' module.  
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/3e273114-6089-4903-abeb-5f43c83ead7f)
-19) Connect MySQL from docker container with following codes in "application.properties" files.  
+20) Connect MySQL from docker container with following codes in "application.properties" files.  
     ![image](https://github.com/user-attachments/assets/81979e14-7ed3-4251-90d7-43f57ab9b292)
     Get into Docker container of MySQL bash  
     docker exec -it mysql(docker name) bash \  
