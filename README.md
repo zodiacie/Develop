@@ -74,6 +74,38 @@
 12) 'Module' is for database relational table field name and setup "Get/Set"
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/cb04215f-c58f-4723-987a-8b36fbff3710)
     ```
+    package com.example.demo.Pojo;
+
+    public class Users {
+        private Integer id;
+        private String name;
+        private String email;
+   
+        public Integer getId(){
+            return id;
+        }
+        public void setId (Integer id){
+            this.id = id;
+        }
+   
+        public String getName(){
+            return name;
+        }
+        public void setName(String name){
+            this.name = name;
+        }
+   
+        public String getEmail(){
+            return email;
+        }
+        public void setEmail(String email){
+            this.email = email;
+        }    
+    }
+    ```
+14) 'Dao' setup sql CRUD functionality with @Mapper and @Component  
+    ![image](https://github.com/zodiacie/FullStack/assets/57634982/94312ef2-6ea3-498b-9589-6e604fe2fc4e)
+    ```
     package com.example.demo.Dao;
     import com.example.demo.Pojo.Users;
     import org.apache.ibatis.annotations.Select;
@@ -92,15 +124,67 @@
        List<Users> selectAll();    
     }
     ```
-14) 'Dao' setup sql CRUD functionality with @Mapper and @Component  
-    ![image](https://github.com/zodiacie/FullStack/assets/57634982/94312ef2-6ea3-498b-9589-6e604fe2fc4e)
-15) Go to Resource folder and open 'application.properties' file to setup Database connection and Mapper xml file
+16) Go to Resource folder and open 'application.properties' file to setup Database connection and Mapper xml file
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/d37641a1-3bf7-4c7b-ba48-7de2146618ab)
-16) Create 'Mapper' folder and xml file to mapping Dao sql CRUD functionality.
+    ```
+    spring.application.name=demo
+
+    server.port = 8080
+    spring.datasource.url = jdbc:mysql://localhost:3306/SpringDatabase
+    spring.datasource.username = root
+    spring.datasource.password = root
+    spring.datasource.driver-class-name = com.mysql.cj.jdbc.Driver
+
+    mybatis.mapper-locations = classpath*:mapper/*.xml
+    ```
+18) Create 'Mapper' folder and xml file to mapping Dao sql CRUD functionality.
     Add @Mapper annotation for MyBatis xml scan.
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/55108d76-cc8a-4b86-9eae-5854dbe8c460)
-17)  'Service' setup business logic for retrieving the data from 'Dao' module  
+    ```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+    <mapper namespace="com.example.demo.Dao.UsersDao">
+       <select id="selectAll" resultType="com.example.demo.Pojo.Users">
+           select * from users
+       </select>
+
+       <select id="select" resultType="com.example.demo.Pojo.Users">
+           SELECT DISTINCT * FROM USERS WHERE USERNAME = #{USERNAME}
+       </select>
+    
+       <insert id="insert">
+           INSERT INTO USERS (USERNAME, PASSWORD, EMAIL) VALUES (#{USERNAME}, #{EMAIL}, #{PASSWORD})
+       </insert>
+ 
+       <delete id="delete">
+           DELETE FROM USERS WHERE USERNAME = #{USERNAME}
+       </delete>
+ 
+       <update id="update">
+           UPDATE USERS SET EMAIL = #{EMAIL} WHERE USERNAME = #{USERNAME}
+       </update> 
+    </mapper>
+    ```
+20)  'Service' setup business logic for retrieving the data from 'Dao' module  
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/097ad34e-56dd-4ab8-a89c-0982f6ff1a90)
+    ```
+    import com.example.demo.Dao.UsersDao;
+    import com.example.demo.Pojo.Users;
+    import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.stereotype.Service;
+    import java.util.List;
+
+    @Service
+    public class UsersService {
+       @Autowired
+       UsersDao usersDao;
+
+       public List<Users> selectAll(){
+           return usersDao.selectAll();
+       }    
+    }
+    ```
     Add @Service("MysqlService") annotation https://blog.csdn.net/BAStriver/article/details/103671096   
     最常用的就是这种直接用@AutoWire的方式了：  
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/c92d81d9-2b68-4cd6-9924-5b7e4dc3533f)
@@ -110,11 +194,68 @@
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/8dd5768f-e231-42a2-9ac7-77be450158c2)
     也可以用@Resource来注入：  
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/e0887702-4381-4b69-a234-c12e8a75b961)
-18) 'Controller' setup interface with frontend react.js file to interact data.  
+22) 'Controller' setup interface with frontend react.js file to interact data.  
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/8e951a84-6b33-4a8e-9179-561832fd214c)
-19) Main application file has to add @MapperScan to map 'Dao' module.  
+    ```
+    package com.example.demo.Controller;
+    import java.util.HashMap;     
+    import java.util.Map;
+
+    import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.web.bind.annotation.RequestMapping;  
+    import org.springframework.web.bind.annotation.ResponseBody;
+    import org.springframework.web.bind.annotation.RestController;
+    //import org.springframework.web.bind.annotation.RequestMethod;
+    import org.springframework.web.bind.annotation.RequestParam;
+    import org.springframework.web.bind.annotation.ResponseBody;
+    import org.springframework.web.bind.annotation.GetMapping;
+    import org.springframework.jdbc.core.JdbcTemplate;
+
+    import com.example.demo.Service.UsersService;
+    import com.example.demo.Pojo.Users;
+    import java.util.List;
+
+    @RestController  
+    @RequestMapping("/") 
+    public class Controller {
+       @RequestMapping("/test")  
+       public Map<String,Object> test(){  
+          Map<String,Object> map=new HashMap<>();
+          map.put("msg", "Successfully Visit");
+          return map;
+       }        
+
+       @Autowired
+       UsersService usersService;
+
+       @GetMapping("/selectall")
+       public List<Users> selectAll(){
+          return usersService.selectAll();
+       }
+    }
+    ```
+24) Main application file has to add @MapperScan to map 'Dao' module.  
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/3e273114-6089-4903-abeb-5f43c83ead7f)
-20) Connect MySQL from docker container with following codes in "application.properties" files.  
+    ```
+    package com.example.demo;
+
+    import org.apache.ibatis.type.MappedTypes;
+    import org.mybatis.spring.annotation.MapperScan;
+    import org.springframework.boot.SpringApplication;
+    import org.springframework.boot.autoconfigure.SpringBootApplication;
+    import com.example.demo.Pojo.Users;
+
+    @MappedTypes(Users.class)
+    @MapperScan("com.example.demo.Dao")
+    @SpringBootApplication
+    public class DemoApplication {
+
+         public static void main(String[] args) {
+		      SpringApplication.run(DemoApplication.class, args);
+	      }
+      }
+    ```
+26) Connect MySQL from docker container with following codes in "application.properties" files.  
     ![image](https://github.com/user-attachments/assets/81979e14-7ed3-4251-90d7-43f57ab9b292)
     Get into Docker container of MySQL bash  
     docker exec -it mysql(docker name) bash \  
