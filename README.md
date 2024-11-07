@@ -1,6 +1,7 @@
 目录:  
 [JDK Setup](#jdksetup)  
 [SpringBoot](#springboot)  
+[NacosSetup](#nacos)  
 [MySQL Setup](#mysql)  
 [MongoDB Setup](#mongo)  
 [ReactJS](#reactjs)  
@@ -262,6 +263,13 @@
     mysql -u root -p \  
     enter password: root. \  
     SHOW DATABASES; \  
+
+<a name = "nacos">Nacos Setup</a>  
+1) Download Nacos Community Edition from https://github.com/alibaba/nacos/tags  
+2) Go to download folder and type tar -zxvf (nacos compressed filename) to extract nacos file.  
+3) Go to Nacos bin folder and type "./startup.sh -m standalone" to start Nacos server.  
+4) Type "./shutdown.sh" to stop Nacos server.
+5) Type "http://192.168.1.XXX:8848/nacos" to login Nacos server. Default LoginID/Password: nacos/nacos  
 
 <a name = "mysql">MySQL Setup</a>
 1) Install MySQL and MySQL WorkBench from Official Website
