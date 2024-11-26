@@ -262,16 +262,16 @@
     docker exec -it mysql(docker name) bash \  
     mysql -u root -p \  
     enter password: root. \  
-    SHOW DATABASES; \
+    SHOW DATABASES; \  
 
-    VSCode Docker Extension with Docker container.
-    1.Install VSCode Docker extension
-    2.Create Docker group "sudo groupadd docker"
-    3.Add current user in docker group "sudo gpasswd -a $USER docker"
-    4.Refresh group "newgrp docker"
-    5.Verify group member "groups $USER"
-    6.Refresh system "systemctl restart docker"
-    7.Changing Ownership of Sock "sudo chown $USER:docker /var/run/docker.sock"
+    VSCode Docker Extension with Docker container.  
+    1.Install VSCode Docker extension  
+    2.Create Docker group "sudo groupadd docker"  
+    3.Add current user in docker group "sudo gpasswd -a $USER docker"  
+    4.Refresh group "newgrp docker"  
+    5.Verify group member "groups $USER"  
+    6.Refresh system "systemctl restart docker"  
+    7.Changing Ownership of Sock "sudo chown $USER:docker /var/run/docker.sock"  
 
 <a name = "nacos">Nacos Setup</a>  
 1) Download Nacos Community Edition from https://github.com/alibaba/nacos/tags  
