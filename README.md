@@ -271,14 +271,55 @@
     4.Refresh group "newgrp docker"  
     5.Verify group member "groups $USER"  
     6.Refresh system "systemctl restart docker"  
-    7.Changing Ownership of Sock "sudo chown $USER:docker /var/run/docker.sock"  
+    7.Changing Ownership of Sock "sudo chown $USER:docker /var/run/docker.sock"
+    8.Docker containers and images should display on VScode.
 
 <a name = "nacos">Nacos Setup</a>  
 1) Download Nacos Community Edition from https://github.com/alibaba/nacos/tags  
 2) Go to download folder and type tar -zxvf (nacos compressed filename) to extract nacos file.  
 3) Go to Nacos bin folder and type "./startup.sh -m standalone" to start Nacos server.  
 4) Type "./shutdown.sh" to stop Nacos server.
-5) Type "http://192.168.1.XXX:8848/nacos" to login Nacos server. Default LoginID/Password: nacos/nacos  
+5) Type "http://192.168.1.XXX:8848/nacos" to login Nacos server. Default LoginID/Password: nacos/nacos
+6) Add dependency in Pom.xml file  
+   <dependency>  
+    <groupId>com.alibaba.cloud</groupId>  
+    <artifactId>spring-cloud-alibaba-dependencies</artifactId>  
+    <version>2021.0.6.0</version>  
+    <type>pom</type>  
+    <scope>import</scope>  
+   </dependency>  
+
+   <dependency>  
+    <groupId>com.alibaba.cloud</groupId>  
+    <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>  
+    <version>2021.0.6.0</version>  
+   </dependency>  
+7) Go to "application.properties" and add following  
+   spring.cloud.nacos.discovery.server-addr = 127.0.0.1:8848  
+   spring.application.name = packagename (like: demo)  
+8) Go to DemoApplication.java file and add "import org.springframework.cloud.client.discovery.EnableDiscoveryClient" + "@EnableDiscoveryClient"  
+9) Run the instance and refresh Nacos Service List. The service should be displayed under Service List table.  
+10)Add dependency in Pom.xml file  
+   <dependency>  
+    <groupId>org.springframework.cloud</groupId>  
+    <artifactId>spring-cloud-starter-openfeign</artifactId>  
+    <version>3.1.5</version>  
+   </dependency>  
+  
+   <dependency>  
+    <groupId>org.springframework.cloud</groupId>  
+    <artifactId>spring-cloud-starter-loadbalancer</artifactId>  
+    <version>3.1.5</version>  
+   </dependency>  
+11)Create "OpenFeign" folder and java file  
+12)import org.springframework.cloud.openfeign.FeignClient + @FeignClient(name = "demo") demo is remote package name.  
+13)Create "interface" and copy remote package's Controller.java claim(@GetMapping("/selecteveryrecord")) and definition(public List<Users> selectAll()).  
+![image](https://github.com/user-attachments/assets/ab4004b0-8a9c-4d89-a20a-179e9bd85122)  
+14)Create "Autowired" and "GetMapping" in local package's Controller.java
+![image](https://github.com/user-attachments/assets/2f56e763-9de8-4298-a504-63de271d8c2e)  
+15)Add @EnableFeignClients(basePackages = "com.example.demo.Feign") to scan Feign interface details
+![image](https://github.com/user-attachments/assets/6622a7ba-b93f-4d09-97c1-5b7a5a37f760)    
+
 
 <a name = "mysql">MySQL Setup</a>
 1) Install MySQL and MySQL WorkBench from Official Website
