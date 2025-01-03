@@ -8,8 +8,8 @@ pipeline:
         - checkout:
             scm:
               git:
-                url: "git@github.com:your-repo/your-project.git"
-                branch: "main"
+                url: "git@github.com:zodiacie/FullStack.git"
+                branch: "SpringCloud"
 
     #- stage: "Build"
     #  steps:
