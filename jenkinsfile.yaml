@@ -5,6 +5,7 @@ pipeline:
    stages:
     - stage: "Checkout Code"
       steps:
+        - echo: "Pipeline execution is running."
         - checkout:
             scm:
               git:
@@ -19,6 +20,6 @@ pipeline:
     #  steps:
     #    - sh: "./deploy.sh"
 
-  post:
-    always:
-      - echo: "Pipeline execution completed."
+  #post:
+  #  always:
+  #    - echo: "Pipeline execution completed."
