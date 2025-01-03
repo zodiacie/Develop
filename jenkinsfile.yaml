@@ -1,1 +1,24 @@
-agent: test
+pipeline:
+  agent:
+    label: "any"
+
+  stages:
+    - stage: "Checkout Code"
+      steps:
+        - checkout:
+            scm:
+              git:
+                url: "git@github.com:your-repo/your-project.git"
+                branch: "main"
+
+    - stage: "Build"
+      steps:
+        - sh: "./build.sh"
+
+    - stage: "Deploy"
+      steps:
+        - sh: "./deploy.sh"
+
+  post:
+    always:
+      - echo: "Pipeline execution completed."
