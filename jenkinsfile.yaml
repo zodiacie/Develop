@@ -2,7 +2,7 @@ pipeline:
   agent:
     label: "any"
 
-  stages:
+   stages:
     - stage: "Checkout Code"
       steps:
         - checkout:
@@ -11,13 +11,13 @@ pipeline:
                 url: "git@github.com:your-repo/your-project.git"
                 branch: "main"
 
-    - stage: "Build"
-      steps:
-        - sh: "./build.sh"
+    #- stage: "Build"
+    #  steps:
+    #    - sh: "./build.sh"
 
-    - stage: "Deploy"
-      steps:
-        - sh: "./deploy.sh"
+    #- stage: "Deploy"
+    #  steps:
+    #    - sh: "./deploy.sh"
 
   post:
     always:
