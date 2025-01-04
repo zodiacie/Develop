@@ -1,0 +1,25 @@
+pipeline:
+  agent:
+    label: "any"
+
+   stages:
+    - stage: "Checkout Code"
+      steps:
+        - echo: "Pipeline execution is running."
+        - checkout:
+            scm:
+              git:
+                url: "git@github.com:zodiacie/FullStack.git"
+                branch: "SpringCloud"
+
+    #- stage: "Build"
+    #  steps:
+    #    - sh: "./build.sh"
+
+    #- stage: "Deploy"
+    #  steps:
+    #    - sh: "./deploy.sh"
+
+  #post:
+  #  always:
+  #    - echo: "Pipeline execution completed."
