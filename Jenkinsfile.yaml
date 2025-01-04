@@ -3,11 +3,11 @@ pipeline:
     any
   stages:
     - stage: Build
-     # steps:
+      steps:
         echo: "Building the project..."
     - stage: Test
-     # steps:
+      steps:
         echo: "Running tests..."
     - stage: Deploy
-     # steps:
+      steps:
         echo: "Deploying the project..."
