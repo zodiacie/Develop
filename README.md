@@ -9,12 +9,20 @@
 6)仿小米电商(NodeJS) https://gitee.com/hai-27/vue-store  
 7)Lilishop https://gitee.com/beijing_hongye_huicheng/lilishop  
 
+目录:
+[VSCode](#vscode)  
 [JDK Setup](#jdksetup)  
 [SpringBoot](#springboot)  
 [NacosSetup](#nacos)  
 [MySQL Setup](#mysql)  
 [MongoDB Setup](#mongo)  
 [ReactJS](#reactjs)  
+
+<a name = "vscode">Install VSCode</a>
+1) Download VSCode .deb from Website.  
+2) Type "sudo su root" to change the user.  
+3) Go to installer folder.  
+4) Type "sudo dpkg -i 'vscode installer name'  
 
 <a name = "jdksetup">JDK Setup</a>  
 Setup JDK and Maven in Ubuntu.  
@@ -344,7 +352,6 @@ export PATH
 15)Add @EnableFeignClients(basePackages = "com.example.demo.Feign") to scan Feign interface details
 ![image](https://github.com/user-attachments/assets/6622a7ba-b93f-4d09-97c1-5b7a5a37f760)    
 
-
 <a name = "mysql">MySQL Setup</a>
 1) Install MySQL and MySQL WorkBench from Official Website
 2) Open MySQL WorkBench
@@ -360,9 +367,7 @@ export PATH
    -v /mydata/mysql/conf:/etc/mysql/conf.d \
    -e MYSQL_ROOT_PASSWORD=root \
    -d mysql:5.7
-
-   
-
+ 
 <a name = "mongo">MongoDB Setup</a>
 1) Install MongoDB and MongoDB Compass from Official Website
 2) Open MongoDB Compass
