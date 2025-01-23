@@ -2,7 +2,7 @@
 目录:  
 [Docker Portainer](#docker)  
 [Gitlab](#gitlab)  
-[Jenkins & JDK/Maven](#jenkins)  
+[Jenkins](#jenkins)  
 [Ansible](#ansible) 
 
 
@@ -31,7 +31,7 @@
 
 
 
-<a name = "jenkins">Jenkins & JDK/Maven</a>
+<a name = "jenkins">Jenkins</a>
 1) Use Portainer to start Jenkins container
 2) Type "sudo docker run --detach --name jenkins -p 50000:50000 -p 8080:8080 \
     -v /var/run/docker.sock:/var/run/docker.sock \
