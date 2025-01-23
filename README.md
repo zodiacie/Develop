@@ -1,13 +1,12 @@
 #DevOps  
 目录:  
-[Docker Portainer](#docker)  
-[Gitlab](#gitlab)  
+[Docker](#docker)  
 [Jenkins](#jenkins)  
-[Ansible](#ansible) 
+[Ansible](#ansible)  
+[Gitlab](#gitlab)  
 
 
-
-<a name = "docker">Docker Portainer</a>  
+<a name = "docker">Docker + Portainer</a>  
 1) Type "sudo apt-get update" to update  
 2) Type "sudo apt-get install ca-certificates curl gnupg"  
 3) Type "sudo su root" to change user.  
