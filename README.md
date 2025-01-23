@@ -2,8 +2,8 @@
 目录:  
 [Docker Portainer](#docker)  
 [Gitlab](#gitlab)  
-
-
+[Jenkins & JDK/Maven](#jenkins)  
+[Ansible](#ansible) 
 
 
 
@@ -29,6 +29,25 @@
 17) Type "sudo docker restart portainer" to restart portainer.  
 18) Login again into the Portainer docker UI page.
 
+
+
+<a name = "jenkins">Jenkins & JDK/Maven</a>
+1) Use Portainer to start Jenkins container
+2) Type "sudo docker run --detach --name jenkins -p 50000:50000 -p 8080:8080 \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    jenkins/jenkins:latest"
+2) Type "IP Address:8080" in the browser to start Jenkins
+3) Type "docker exec -u 0 -it jenkins(container name) /bin/bash" in terminal to login as docker root user.
+4) Type "exit" to quit docker root user.
+4) Go to "/var/jenkins_home/secrets/initialAdminPassword" to get password.
+5) Paste password and click on "Sugguest Plugins" to setup Jenkins. Usually Username: admin, Password: Zxcv!23456
+
+
+<a name = "ansible">Ansible</a>
+1) sudo apt-add-repository ppa:ansible/ansible
+2) sudo apt update
+3) sudo apt install ansible
+4) ansible --version to check if it's installed correctly.
 
 
 <a name = "gitlab">Gitlab</a>
