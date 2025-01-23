@@ -1,9 +1,16 @@
 目录:  
+[VSCode](#vscode)
 [NodeJS](#nodejs)  
-[MySQL Setup](#mysql)  
-[MongoDB Setup](#mongo)  
+[MySQL](#mysql)  
+[MongoDB](#mongo)  
 [ReactJS](#reactjs)  
 
+
+<a name = "vscode">Install VSCode</a>
+1) Download VSCode .deb from Website.  
+2) Type "sudo su root" to change the user.  
+3) Go to installer folder.  
+4) Type "sudo dpkg -i 'vscode installer name'  
 
 <a name = "nodejs">NodeJS</a>
 1) Install Nodejs from official website.  
@@ -29,7 +36,7 @@
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/13089a7c-8dc6-4c72-b355-e946cca642c7)
     ![image](https://github.com/zodiacie/FullStack/assets/57634982/df47ff74-4d4e-4e7d-b111-b77a64b9c1f1)
 
-<a name = "mysql">MySQL Setup</a>
+<a name = "mysql">MySQL</a>
 1) Install MySQL and MySQL WorkBench from Official Website
 2) Open MySQL WorkBench
    ![image](https://github.com/zodiacie/FullStack/assets/57634982/397ba58c-7b99-4a6f-975e-9c2aad060407)
@@ -50,7 +57,7 @@
    enter password: root. \
    SHOW DATABASES; \
 
-<a name = "mongo">MongoDB Setup</a>
+<a name = "mongo">MongoDB</a>
 1) Install MongoDB and MongoDB Compass from Official Website
 2) Open MongoDB Compass
 3) Go to 'New Connection' to setup new clusters
