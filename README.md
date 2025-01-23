@@ -9,7 +9,7 @@
 6)仿小米电商(NodeJS) https://gitee.com/hai-27/vue-store  
 7)Lilishop https://gitee.com/beijing_hongye_huicheng/lilishop  
 
-目录:
+目录:  
 [VSCode](#vscode)  
 [JDK Setup](#jdksetup)  
 [SpringBoot](#springboot)  
