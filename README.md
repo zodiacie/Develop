@@ -1,5 +1,4 @@
 电商实战项目  
-![aHR0cHM6Ly9uZXdiZWUtbWFsbC5vc3MtY24tYmVpamluZy5hbGl5dW5jcy5jb20vcG9zdGVyL3N0b3JlL25ld2JlZS1tYWxsLXMucG5n](https://github.com/zodiacie/FullStack/assets/57634982/37dc2129-af68-4921-9faa-570678008a74)  
 1)NewBee电商 https://github.com/newbee-ltd/newbee-mall  
 2)Swarm微服务 https://github.com/macrozheng/mall-swarm  
 3)SpringCloud https://github.com/SiGuiyang/spring-cloud-shop  
@@ -7,6 +6,7 @@
 5)Mall4J电商 https://github.com/gz-yami/mall4j  
 6)仿小米电商(NodeJS) https://gitee.com/hai-27/vue-store  
 7)Lilishop https://gitee.com/beijing_hongye_huicheng/lilishop  
+![aHR0cHM6Ly9uZXdiZWUtbWFsbC5vc3MtY24tYmVpamluZy5hbGl5dW5jcy5jb20vcG9zdGVyL3N0b3JlL25ld2JlZS1tYWxsLXMucG5n](https://github.com/zodiacie/FullStack/assets/57634982/37dc2129-af68-4921-9faa-570678008a74)  
 
 目录:  
 [VSCode](#vscode)  
