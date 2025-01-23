@@ -1,4 +1,3 @@
-目录:  
 电商实战项目  
 ![aHR0cHM6Ly9uZXdiZWUtbWFsbC5vc3MtY24tYmVpamluZy5hbGl5dW5jcy5jb20vcG9zdGVyL3N0b3JlL25ld2JlZS1tYWxsLXMucG5n](https://github.com/zodiacie/FullStack/assets/57634982/37dc2129-af68-4921-9faa-570678008a74)  
 1)NewBee电商 https://github.com/newbee-ltd/newbee-mall  
