@@ -7,9 +7,23 @@
 [ReactJS](#reactjs)  
 
 <a name = "jdksetup">JDK Setup</a>  
+Setup JDK and Maven in Ubuntu.
 1) Remove JDK: sudo apt-get purge (JDK name: openjdk-11-jre:amd64)  
-2) Check JDK list: sudo dpkg --list | grep -i jdk  
-3) Install JDK: sudo apt install openjdk-17-jdk  
+2) Check JDK list: sudo dpkg --list | grep -i jdk
+3) Type "sudo apt-get update"
+4) Install JDK: type "sudo apt install openjdk-17-jdk"/"sudo apt install default-jdk"
+5) Type "sudo apt install maven"
+6) Type "java --version" and "mvn -v" to check the version.
+7) Type "nano ~/.bashrc"
+8) Type following lines to the end of the file
+JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64(JDK-name)
+MAVEN_HOME=/usr/share/maven
+export JAVA_HOME
+export MAVEN_HOME
+PATH=$JAVA_HOME/bin:$MAVEN_HOME/bin:$PATH
+export PATH
+9) Type ". ~/.bashrc" to apply the file.
+10) Type "$JAVA_HOME" and "$MAVEN_HOME" to verify.
 
 <a name = "springboot">SpringBoot Setup</a>  
 1) VSCode 里安装Java Extension Pack和Spring Boot Extension Pack - Following code suitable for Spring 2.7.18 and myBatis 1.3.2
