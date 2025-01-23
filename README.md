@@ -11,11 +11,11 @@
 
 目录:  
 [VSCode](#vscode)  
-[JDK Setup](#jdksetup)  
+[JDK Maven](#jdksetup)  
 [SpringBoot](#springboot)  
-[NacosSetup](#nacos)  
-[MySQL Setup](#mysql)  
-[MongoDB Setup](#mongo)  
+[Nacos](#nacos)  
+[MySQL](#mysql)  
+[MongoDB](#mongo)  
 [ReactJS](#reactjs)  
 
 <a name = "vscode">Install VSCode</a>
@@ -24,7 +24,7 @@
 3) Go to installer folder.  
 4) Type "sudo dpkg -i 'vscode installer name'  
 
-<a name = "jdksetup">JDK Setup</a>  
+<a name = "jdksetup">JDK Maven</a>  
 Setup JDK and Maven in Ubuntu.  
 1) Remove JDK: sudo apt-get purge (JDK name: openjdk-11-jre:amd64)  
 2) Check JDK list: sudo dpkg --list | grep -i jdk  
@@ -43,7 +43,7 @@ export PATH
 9) Type ". ~/.bashrc" to apply the file.  
 10) Type "$JAVA_HOME" and "$MAVEN_HOME" to verify.  
 
-<a name = "springboot">SpringBoot Setup</a>  
+<a name = "springboot">SpringBoot</a>  
 1) VSCode 里安装Java Extension Pack和Spring Boot Extension Pack - Following code suitable for Spring 2.7.18 and myBatis 1.3.2
    ![image](https://github.com/zodiacie/FullStack/assets/57634982/12e9793f-f80b-45ca-ac89-f2ed3f1beab6)
    ![image](https://github.com/zodiacie/FullStack/assets/57634982/fd59fba5-49c3-402d-be36-268853a4ca2b)
@@ -306,7 +306,7 @@ export PATH
     7.Changing Ownership of Sock "sudo chown $USER:docker /var/run/docker.sock"
     8.Docker containers and images should display on VScode.
 
-<a name = "nacos">Nacos Setup</a>  
+<a name = "nacos">Nacos</a>  
 1) Download Nacos Community Edition from https://github.com/alibaba/nacos/tags  
 2) Go to download folder and type tar -zxvf (nacos compressed filename) to extract nacos file.  
 3) Go to Nacos bin folder and type "./startup.sh -m standalone" to start Nacos server.  
@@ -352,7 +352,7 @@ export PATH
 15)Add @EnableFeignClients(basePackages = "com.example.demo.Feign") to scan Feign interface details
 ![image](https://github.com/user-attachments/assets/6622a7ba-b93f-4d09-97c1-5b7a5a37f760)    
 
-<a name = "mysql">MySQL Setup</a>
+<a name = "mysql">MySQL</a>
 1) Install MySQL and MySQL WorkBench from Official Website
 2) Open MySQL WorkBench
    ![image](https://github.com/zodiacie/FullStack/assets/57634982/397ba58c-7b99-4a6f-975e-9c2aad060407)
@@ -368,7 +368,7 @@ export PATH
    -e MYSQL_ROOT_PASSWORD=root \
    -d mysql:5.7
  
-<a name = "mongo">MongoDB Setup</a>
+<a name = "mongo">MongoDB</a>
 1) Install MongoDB and MongoDB Compass from Official Website
 2) Open MongoDB Compass
 3) Go to 'New Connection' to setup new clusters
