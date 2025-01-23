@@ -1,12 +1,12 @@
-#DevOps
-目录: 
-[Docker & Portainer](#docker) 
-<a name = "docker">Docker & Portainer</a>
-1) Type "sudo apt-get update" to update 
+#DevOps  
+目录:  
+[Docker & Portainer](#docker)  
+<a name = "docker">Docker & Portainer</a>  
+1) Type "sudo apt-get update" to update  
 2) Type "sudo apt-get install ca-certificates curl gnupg"  
 3) Type "sudo su root" to change user.  
 4) Type "mkdir /etc/apt/keyrings" to create the folder   
-5) Type "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg"
+5) Type "curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg"  
 6) Type echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null  
 7) Type "sudo apt-get update" to update the command  
 6) Type "sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin"  
