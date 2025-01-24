@@ -1,56 +1,37 @@
-# FullStack
+[Selenium Python](#SeleniumPython) 
 
+[Selenium Setup ChromeDriver](#SeleniumChrome)
 
-目录:  
-[Bitcoin Setup](#bitcoin)  
-[Etherum Setup](#etherum)  
+<a name = "SeleniumPython">Selenium Setup Python</a>
+1) Install Python3.x and VSCode "sudo apt update" and "sudo apt install python3"
+2) Setup Path of Python in system environment (only for windows)
+3) Update "sudo apt update"
+4) Install "sudo apt install python3"
+5) Verify "python3 --version"
+6) Install pip "sudo apt-get install python3-pip" (only for Ubuntu)
+7) Verify pip "pip --version" and go to "/usr/lib/python3/dist-packages/pip" folder
+8) Install Selenium for Python "sudo pip install -U selenium"
+9) Go to "cd /usr/local/lib/python3.10/dist-packages" folder to verify selenium version.
+10) Go to "/home/sean/Downloads" folder and Download Chrome "wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
+11) Install Chrome "sudo dpkg -i google-chrome-stable_current_amd64.deb"
+12) VSCode -> Extensions section to install Python plugins (Python, Pylance etc).![image](https://github.com/zodiacie/Automation/assets/57634982/518f1817-e519-4f76-9079-d98cb5283806)
+13) Create Python File -> Ctrl + Shift + P -> Python File.![image](https://github.com/zodiacie/Automation/assets/57634982/1ae87b2a-9b4c-4d52-bd8c-0fa38368f0dc)
+14) Create BaseDriver.py to setup WebDriver.![image](https://github.com/zodiacie/Automation/assets/57634982/f9c5aae3-6f9e-46bc-b508-bec1e003660e)
+15) Create Test Script with UnitTest and make sure function name starts with "test".![image](https://github.com/zodiacie/Automation/assets/57634982/ef0b885f-8ae4-4f6f-81af-68e24e82959d)
+16) Setup Python Test Framework -> Click "Enable and Configure a Test Framework".![image](https://github.com/zodiacie/Automation/assets/57634982/6ad86573-f007-41bf-98c9-1600674428c9)![image](https://github.com/zodiacie/Automation/assets/57634982/9043227d-e956-4c78-8377-4ce2a3c3131f)
+17) Or you may go to "Test" icon and click on "Configure Python Tests" to configure the same.  
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/4090033d-e3fb-4679-9186-7e1116d4dd6f)
+18) Select "Unittest" from the dropdown list.![image](https://github.com/zodiacie/Automation/assets/57634982/884f1a0e-f1af-4ffe-9ba1-3fc14dd8944b)
+19) Right click on "Root Directory" to choose the *.py files type and location.![image](https://github.com/zodiacie/Automation/assets/57634982/635b1133-6a5b-4fb0-afd8-1c842104126a)
+20) Choose one type based on your name convention.![image](https://github.com/zodiacie/Automation/assets/57634982/a76daeff-f17c-4db2-ae95-456c9a66f936)
+21) Go to download and install "Beautiful Report" (python setup.py install https://pypi.org/project/BeautifulReport/#files).  
+    ![image](https://github.com/zodiacie/Automation/assets/57634982/469f40ba-dd1d-414c-9742-4fd5cd499c98)
 
-<a name = "bitcoin">Bitcoin Private Chain Setup</a>
-1) 比特币区块链是两遍SHA256的Hash算法
-   https://learnku.com/python/t/22970/build-your-own-block-chain-step-by-step-with-python
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/b15cd35d-6f0d-4a70-a36a-c20524e79918)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/5d86f544-976f-443a-b8a3-594e9c7506f7)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/fb978539-01b2-4b3a-8c66-841fc0cf9f57)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/f51ef9fe-e8b3-48d9-9148-1fa69274fbd6)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/1fb55f62-f653-4c04-9791-43eba51d95bc)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/f6f22110-2814-4313-97c4-6eb36be3ceba)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/8f261512-53ed-49e0-8190-258f6bc00d8c)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/a576828a-539e-4c83-a040-2f5127c347b3)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/09a44eb2-6329-444b-bfb6-4a692ab669e5)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/e822fd29-4adc-40cf-8da9-5c173237f184)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/a5b18155-c7c3-4b65-a284-2a515a0a46cd)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/97f68235-bb88-471c-b01a-de5493101027)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/d7e5268c-8181-4138-8899-0597cc54d46c)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/cc0df12d-3b96-4c19-9cf2-fafdca54bfc4)
-
-<a name = "etherum">Ethrum Private Chain Setup</a>
-1) 以太坊区块链通过读取Memory Hard Mining Puzzle。 以太坊中，设计了两个数据集，一大一小。小的为16MB的cache，大的数据集为1G的dataset(DAG)，1G的数据集是通过16MB数据集生成而来的。16MB的Cache数据生成方式：通过Seed进行一些运算获得第一个数,之后每个数字都是通过前一个位置的值取哈希获得的大的DAG生成方式：大的数组中每个元素都是从小数组中按照伪随机顺序读取一些元素。如第一次读取A位置数据，对当前哈希值更新迭代算出下一次读取位置B，再进行哈希值更新迭代计算出C位置元素。如此来回迭代读取256次，最终算出一个哈希值作为DAG中第一个元素，如此类推，DAG中每个元素生成方式都依次类推。
-   https://learnblockchain.cn/books/geth/part2/consensus/ethash_implement.html
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/8a59fdab-6998-4614-ae86-2a120dbd0949)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/3f7caf14-ddc1-4b9d-9043-e67860336fae)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/200c8535-68f6-4898-818f-7f691096ef05)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/4f4e5091-b352-4d90-a75f-26bea3c5985d)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/b691bdba-0d56-44d3-b5c7-045815da28be)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/d64bfbdd-0959-46cc-ba44-c4e0bc4f830b)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/ec8f0fb6-29db-4d16-9fec-48aa3acce420)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/042fa707-dcb0-404c-8402-628dcebef62c)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/d2bd02b0-7dd8-4fe7-858e-92d4fe9545cf)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/54e78b8b-3a0f-433a-88e6-1a8bb73417f1)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/3f08ce0b-fe24-4115-ad5d-c5a6d06bc7d4)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/2b62beb8-c823-422e-8170-98162bd9a6e0)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/f91c66e3-8da7-4d6f-a1e2-097a0981e8e3)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/7a7e5656-b379-4290-a4ca-06a46bd196d2)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/f2617a1a-be13-4fda-993c-ccb769b0bf03)
-2) 挖矿算法
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/9b8f8b62-5160-4aa2-8821-50875e62254f)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/274ed11e-bf6e-4d49-a9b1-de3ad155c514)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/0d6397c2-0c0f-4091-bf0b-76013a4206ab)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/e8bb2c62-ca5a-42f3-8164-b2536d04538c)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/8e86885e-9648-43ee-830c-1e535c631c26)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/54d7f704-1547-4ec9-8d52-b4b791af6257)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/4febd913-adab-43ab-bb15-375bbbaf0313)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/63fe72b3-71e6-43ef-9d2d-cd7d853a35ea)
-3) 以太坊私有链创建
-   https://blog.csdn.net/andy_zhang2007/article/details/102858390
-
+<a name = "SeleniumChrome">Selenium Setup Chrome</a>
+1) Download Chromedriver from "https://chromedriver.chromium.org/downloads/version-selection" website.
+2) Install Unzip "sudo apt install unzip" first.
+3) Unzip " unzip [FileName].zip" downloaded Chromedriver.
+4) Move chromedriver to "sudo mv chromedriver /usr/bin/chromedriver" folder
+5) Config chromedriver "sudo chown root:root /usr/bin/chromedriver
+6) Config chromedriver "sudo chmod +x /usr/bin/chromedriver"
 
