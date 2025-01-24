@@ -3,7 +3,7 @@
 [Jenkins](#jenkins)  
 [Ansible](#ansible)  
 [Gitlab](#gitlab)  
-
+Devops: Git, Gitlab, Github, Jenkins, Ansible, Docker, Kubernetes setup.  
 
 <a name = "docker">Docker + Portainer</a>  
 1) Type "sudo apt-get update" to update  
