@@ -1,56 +1,99 @@
-# FullStack
+[maocOS VMWare Install](#macInstall)
+
+[Appium iOS](#AppiumiOS)
+
+[Appium Android](#AppiumAndroid)  
+
+<a name = "macInstall">MacOS VMWare Install</a>
+1) Open VMWare and select "Install IOS later" the third option
+2) Choose Hardware config for 4gb ram and 1 processor with 2 cores
+3) Choose single one harddisk and 30gb space
+4) Choose DVD option and select macOS Sierra.iso
+5) Save and finish the setting
+6) Download "WMWare unlock tool" and run as administrator of "win-install.cmd" file to install
+7) Open macOSSierra.vmx by notepad and Add (smc.version = "0") at end of the file
+8) And then edit as (ethernet0.virtualDev = "vmxnet3") and save the macOSSierra.vmx file
+9) Start the macOS virtual machine and Select "Utilities" and "Disk Utility" item
+10) Select "VMWare Virtual SATA Hard Drive Media" item and click Erase button
+11) Type "name" value and click erase button again and Follow the step to continue and finish the installation.
+12) Turn off macOS system and go to VMWare to deselect DVD disk "Connect on Power" option.
+13) Open macOS again and go to "VM" menu and select "Install VMWare tool" option to install the VMWare tool and After installation, restart the macOS and it displays full screen.
+
+<a name = "AppiumiOS">Appium iOS</a>
+
+1) Download and install Xcode tool
+2) Once it's installed, click "Xcode" menu and select "Open Developer Tool" item, then choose "Simulator" item to open simulator.
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/87a01e58-5fa9-449d-a486-aecc88f29d4c)
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/46a907f0-e94b-441e-b73c-8eea10f8b662)
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/7d7a6997-c410-4013-86b7-bea221bf945a)
+3) Install "Brew": Go to "https://brew.sh/" and copy "/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"" command to macOS terminal to execute.
+4) Install "Carthage": Go to macOS terminal and type "brew install carthage"
+5) Install "Appium-Doctor" (This is optional): Go to macOS terminal and type "npm install -g appium-doctor". it's for verify appium function properly (appium-doctor --ios)
+6) Downlaod and install Appium.
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/0ba58c73-f42b-49f6-b109-2e4d8774846e)
+7) Change the "Host" address to "127.0.0.1"  
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/364e1954-ab92-4630-ace5-f1c40a63a682)
+9) Type "xcodebuild -showsdks" to display simulator names
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/6d33eb0b-114a-460f-a9c1-dafb4d89e4a5)
+10) Type "xcodebuild -sdk (simulator name)" to create simulator app under xcode project folder.  
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/12c7f81e-70fd-4c01-a21d-f4b060dc2f13)
+11) Go to Appium and click "Start Server" button  
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/4caff5c1-03dd-4f21-8a5e-13e0a4c550f8)
+12) Click "Start Inspector Session" button and type following inputs. Save the inputs and start the session.
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/e412de18-5d8e-493c-b466-723aad570076)
+13) Appium should be starting properly.
+
+   
+
+   
 
 
-目录:  
-[Bitcoin Setup](#bitcoin)  
-[Etherum Setup](#etherum)  
-
-<a name = "bitcoin">Bitcoin Private Chain Setup</a>
-1) 比特币区块链是两遍SHA256的Hash算法
-   https://learnku.com/python/t/22970/build-your-own-block-chain-step-by-step-with-python
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/b15cd35d-6f0d-4a70-a36a-c20524e79918)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/5d86f544-976f-443a-b8a3-594e9c7506f7)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/fb978539-01b2-4b3a-8c66-841fc0cf9f57)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/f51ef9fe-e8b3-48d9-9148-1fa69274fbd6)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/1fb55f62-f653-4c04-9791-43eba51d95bc)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/f6f22110-2814-4313-97c4-6eb36be3ceba)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/8f261512-53ed-49e0-8190-258f6bc00d8c)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/a576828a-539e-4c83-a040-2f5127c347b3)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/09a44eb2-6329-444b-bfb6-4a692ab669e5)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/e822fd29-4adc-40cf-8da9-5c173237f184)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/a5b18155-c7c3-4b65-a284-2a515a0a46cd)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/97f68235-bb88-471c-b01a-de5493101027)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/d7e5268c-8181-4138-8899-0597cc54d46c)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/cc0df12d-3b96-4c19-9cf2-fafdca54bfc4)
-
-<a name = "etherum">Ethrum Private Chain Setup</a>
-1) 以太坊区块链通过读取Memory Hard Mining Puzzle。 以太坊中，设计了两个数据集，一大一小。小的为16MB的cache，大的数据集为1G的dataset(DAG)，1G的数据集是通过16MB数据集生成而来的。16MB的Cache数据生成方式：通过Seed进行一些运算获得第一个数,之后每个数字都是通过前一个位置的值取哈希获得的大的DAG生成方式：大的数组中每个元素都是从小数组中按照伪随机顺序读取一些元素。如第一次读取A位置数据，对当前哈希值更新迭代算出下一次读取位置B，再进行哈希值更新迭代计算出C位置元素。如此来回迭代读取256次，最终算出一个哈希值作为DAG中第一个元素，如此类推，DAG中每个元素生成方式都依次类推。
-   https://learnblockchain.cn/books/geth/part2/consensus/ethash_implement.html
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/8a59fdab-6998-4614-ae86-2a120dbd0949)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/3f7caf14-ddc1-4b9d-9043-e67860336fae)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/200c8535-68f6-4898-818f-7f691096ef05)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/4f4e5091-b352-4d90-a75f-26bea3c5985d)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/b691bdba-0d56-44d3-b5c7-045815da28be)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/d64bfbdd-0959-46cc-ba44-c4e0bc4f830b)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/ec8f0fb6-29db-4d16-9fec-48aa3acce420)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/042fa707-dcb0-404c-8402-628dcebef62c)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/d2bd02b0-7dd8-4fe7-858e-92d4fe9545cf)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/54e78b8b-3a0f-433a-88e6-1a8bb73417f1)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/3f08ce0b-fe24-4115-ad5d-c5a6d06bc7d4)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/2b62beb8-c823-422e-8170-98162bd9a6e0)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/f91c66e3-8da7-4d6f-a1e2-097a0981e8e3)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/7a7e5656-b379-4290-a4ca-06a46bd196d2)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/f2617a1a-be13-4fda-993c-ccb769b0bf03)
-2) 挖矿算法
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/9b8f8b62-5160-4aa2-8821-50875e62254f)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/274ed11e-bf6e-4d49-a9b1-de3ad155c514)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/0d6397c2-0c0f-4091-bf0b-76013a4206ab)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/e8bb2c62-ca5a-42f3-8164-b2536d04538c)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/8e86885e-9648-43ee-830c-1e535c631c26)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/54d7f704-1547-4ec9-8d52-b4b791af6257)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/4febd913-adab-43ab-bb15-375bbbaf0313)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/63fe72b3-71e6-43ef-9d2d-cd7d853a35ea)
-3) 以太坊私有链创建
-   https://blog.csdn.net/andy_zhang2007/article/details/102858390
+ 
 
 
+
+
+<a name = "AppiumAndroid">Appium Android</a>
+1) Install Android Studio from Official Website.
+2) Open Android Studio, it will download and setup automatically.
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/1e6a6577-59f3-484a-85f0-f03134bf0790)
+3) Setup 'JAVA_HOME' 'Path' and 'ANDROID HOME' in environment variable.  
+   JAVA_HOME for JDK, ANDRIOD_HOME for Android SDK location, Path for JDK tools.
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/8b2c0a0c-a414-48a5-bd04-f59bf947be0b)
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/84b8a2e7-8448-4096-b59d-daff62fe4a58)
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/d6be3586-9ec4-4091-806a-b66f6493f00e)
+4) Setup Virtual Device in Android Studio
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/ae8439f0-3a2d-438f-bc33-fb80ffca3573)
+5) Select 'Pixel 2' and click 'Next'
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/d37a6fca-300f-4672-9a3b-6569bf1e9f86)
+6) Select available item and click on 'Next'
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/288203d4-4030-48fa-9c60-45367422d1ec)
+7) Click on 'Finish'
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/dc0a7785-2158-4ecb-b369-0fa2d9cced42)
+8) Start Android Emulator
+   If there's no system_images folder in SDK folder, please following  
+   https://dl.google.com/android/repository/sys-img/google_apis/x86-27_r09.zip.  
+   Unzip and put it under \Sdk\system-images\android-27\google_apis\x86  
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/4b167326-f05a-4c5f-b966-09b4b669f363)
+9) Install the Appium from Official website
+10) Start Appium Desktop and put "127.0.0.1" in Host
+    ![image](https://github.com/zodiacie/Automation/assets/57634982/06b05afd-9cec-4d72-a71b-57fea9980665)
+11) Click on 'Edit Config' button to config the following
+    ![image](https://github.com/zodiacie/Automation/assets/57634982/705e7523-8147-4b18-a7e5-9fef70768e1b)
+12) Click on "Start Server"
+    ![image](https://github.com/zodiacie/Automation/assets/57634982/9016ddc3-cea9-4b48-9ef3-3af82c14a29f)
+13) Click on 'Magnifying Glass' icon
+    ![image](https://github.com/zodiacie/Automation/assets/57634982/deb5add2-29c0-4507-ba2b-6600c65ad39e)
+14) Go to 'Desired Capabilities' section
+    ![image](https://github.com/zodiacie/Automation/assets/57634982/935eb048-0fee-4af5-a455-54d0d1995905)
+    "automationName": "Appium",  
+    "platformName": "Android",  
+    "platformVersion": "8.1", Version# can be found in Android Studio Device Manager section.  
+    "deviceName": "127.0.0.1:5554" Connect Port# can be found in CMD  
+    ![image](https://github.com/zodiacie/Automation/assets/57634982/efcf849f-9c45-40d8-9d47-eccaf4d9e15c)
+    ![image](https://github.com/zodiacie/Automation/assets/57634982/fa03549a-99aa-4c6e-870a-3c40a8bccd02)
+15) Save the settings and Click 'Start Session'
+    ![image](https://github.com/zodiacie/Automation/assets/57634982/622e6a5f-ccb9-4821-b618-81391710cedc)
+16) Install Python Appium from official websiten (under file folder -> cmd python setup.py install)
+17) Import Webdriver from Appium and put 127.0.0.1:4723 as connection
+    ![image](https://github.com/zodiacie/Automation/assets/57634982/b20e2f02-3448-4cd8-b812-2bb38603ee88)
