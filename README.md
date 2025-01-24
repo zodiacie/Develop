@@ -1,56 +1,159 @@
-# FullStack
-
-
 目录:  
-[Bitcoin Setup](#bitcoin)  
-[Etherum Setup](#etherum)  
+[UFT](#uft)  
+[ATF](#atf)  
+[Postman](#postman)  
 
-<a name = "bitcoin">Bitcoin Private Chain Setup</a>
-1) 比特币区块链是两遍SHA256的Hash算法
-   https://learnku.com/python/t/22970/build-your-own-block-chain-step-by-step-with-python
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/b15cd35d-6f0d-4a70-a36a-c20524e79918)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/5d86f544-976f-443a-b8a3-594e9c7506f7)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/fb978539-01b2-4b3a-8c66-841fc0cf9f57)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/f51ef9fe-e8b3-48d9-9148-1fa69274fbd6)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/1fb55f62-f653-4c04-9791-43eba51d95bc)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/f6f22110-2814-4313-97c4-6eb36be3ceba)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/8f261512-53ed-49e0-8190-258f6bc00d8c)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/a576828a-539e-4c83-a040-2f5127c347b3)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/09a44eb2-6329-444b-bfb6-4a692ab669e5)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/e822fd29-4adc-40cf-8da9-5c173237f184)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/a5b18155-c7c3-4b65-a284-2a515a0a46cd)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/97f68235-bb88-471c-b01a-de5493101027)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/d7e5268c-8181-4138-8899-0597cc54d46c)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/cc0df12d-3b96-4c19-9cf2-fafdca54bfc4)
+<a name = "uft">UFT</a>  
+1) OpenChrome
+```
+Function OpenChrome()
+    Set chrome = CreateObject ("WScript.Shell")
+    chrome.Run "Chrome.exe -url https://cibcsit.service-now.com"    
+End Function
+Function AccountFees ()
+   Set browser_obj = Description.Create
+   browser_obj("creationtime").value = "0"
+   Set page_obj = Description.Create
+   page_obj("abs_x").value = "0"
 
-<a name = "etherum">Ethrum Private Chain Setup</a>
-1) 以太坊区块链通过读取Memory Hard Mining Puzzle。 以太坊中，设计了两个数据集，一大一小。小的为16MB的cache，大的数据集为1G的dataset(DAG)，1G的数据集是通过16MB数据集生成而来的。16MB的Cache数据生成方式：通过Seed进行一些运算获得第一个数,之后每个数字都是通过前一个位置的值取哈希获得的大的DAG生成方式：大的数组中每个元素都是从小数组中按照伪随机顺序读取一些元素。如第一次读取A位置数据，对当前哈希值更新迭代算出下一次读取位置B，再进行哈希值更新迭代计算出C位置元素。如此来回迭代读取256次，最终算出一个哈希值作为DAG中第一个元素，如此类推，DAG中每个元素生成方式都依次类推。
-   https://learnblockchain.cn/books/geth/part2/consensus/ethash_implement.html
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/8a59fdab-6998-4614-ae86-2a120dbd0949)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/3f7caf14-ddc1-4b9d-9043-e67860336fae)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/200c8535-68f6-4898-818f-7f691096ef05)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/4f4e5091-b352-4d90-a75f-26bea3c5985d)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/b691bdba-0d56-44d3-b5c7-045815da28be)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/d64bfbdd-0959-46cc-ba44-c4e0bc4f830b)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/ec8f0fb6-29db-4d16-9fec-48aa3acce420)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/042fa707-dcb0-404c-8402-628dcebef62c)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/d2bd02b0-7dd8-4fe7-858e-92d4fe9545cf)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/54e78b8b-3a0f-433a-88e6-1a8bb73417f1)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/3f08ce0b-fe24-4115-ad5d-c5a6d06bc7d4)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/2b62beb8-c823-422e-8170-98162bd9a6e0)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/f91c66e3-8da7-4d6f-a1e2-097a0981e8e3)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/7a7e5656-b379-4290-a4ca-06a46bd196d2)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/f2617a1a-be13-4fda-993c-ccb769b0bf03)
-2) 挖矿算法
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/9b8f8b62-5160-4aa2-8821-50875e62254f)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/274ed11e-bf6e-4d49-a9b1-de3ad155c514)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/0d6397c2-0c0f-4091-bf0b-76013a4206ab)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/e8bb2c62-ca5a-42f3-8164-b2536d04538c)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/8e86885e-9648-43ee-830c-1e535c631c26)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/54d7f704-1547-4ec9-8d52-b4b791af6257)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/4febd913-adab-43ab-bb15-375bbbaf0313)
-   ![image](https://github.com/zodiacie/FullStack/assets/57634982/63fe72b3-71e6-43ef-9d2d-cd7d853a35ea)
-3) 以太坊私有链创建
-   https://blog.csdn.net/andy_zhang2007/article/details/102858390
+   Set snb = Browser(browser_obj)
+   Set snp = snb.Page(page_obj)
+   Set snsearch = snp.RunScript("document.getElementById('filter');")
+   Set snsearch2 = snp.RunScript("document.getElementById('sysparm_search')")
+   snsearch.value = "incident"
+   snsearch2.value = "service"
+   snp.RunScript("alert('hello')")
+End Function
+Function GetIt()  
+   Set browser_obj = Description.Create
+   browser_obj("creationtime").value = "0"
+   Set page_obj = Description.Create
+   page_obj("abs_x").value = "0"
+   
+   Set link_obj = Description.Create
+   link_obj("micclass").value = "Link"
+   link_obj("name").value = "getIT"
+   
+   Set link_obj2 = Description.Create
+   link_obj2("micclass").value = "Link"
+   'link_obj2("name").value = "Service Catalog"
+   link_obj2("name").value = "Create New – No Template"
+   
+   Set snb = Browser(browser_obj)
+   Set snp = snb.Page(page_obj)
+   'Set swl = snp.WebList(weblist_obj)
+   Set slk = snp.Link(link_obj)
+   slk.Click
+   Set slk2 = snp.Link(link_obj2)
+   slk2.Click
+   snp.RunScript("alert('hello')")
+End Function
+Call OpenChrome()
+   wait 50
+   'Call GetIt()
+   'wait 10
+Call AccountFees()
+```
 
+<a name = "atf">ATF</a>  
+```
+(function(outputs, steps, stepResult, assertEqual) {
+   // add test script here
+   //var number_id;
+   var gr = new GlideRecord ('sc_request');
+   //gr.query('Number','REQ0010005');
+   /*gr.initialize();
+   gr.price = '20';
+   gr.active = 'true';
+   gr.insert();*/
+   gr.orderByDesc('sys_created_on');
+   gr.setLimit(1);
+   gr.query();
+   if (gr.next()){
+      //gs.print (gr.sys_id + '-' + gr.number + ' - ' + gr.sys_created_on);
+      outputs.table = gr.getRecordClassName();
+      outputs.record_id = gr.number;
+      stepResult.setOutputMessage('Successfully output - ' + gr.sys_id + '-' + outputs.record_id + ' - ' + outputs.table + '-' +gr.sys_created_on);
+      //gr.deleteMultiple();
+   }
+   /*gr.orderByDesc('sys_created_on');
+   gr.setLimit(1);
+   gr.query();
+   if (gr.next()){
+      stepResult.setOutputMessage(gr.sys_id + '-' + gr.number + ' - ' + gr.sys_created_on);
+   }
+}
+(function(outputs, steps, stepResult, assertEqual) {
+    // add test script here
+   var SYSID = '83a88f2a2f2f00105282d6c6f699b644';
+   var record = steps(SYSID).record_id;
+   //var record = steps(SYSID).table;
+   stepResult.setOutputMessage('Successfully output - ' + record);
+})(outputs, steps, stepResult, assertEqual);
+```
+![image](https://github.com/zodiacie/Automation/assets/57634982/7307919b-a13a-40b4-b671-e158b8b0fe09)  
+![image](https://github.com/zodiacie/Automation/assets/57634982/70a383d0-e963-4345-b94d-c2f13eedf6e7)  
 
+<a name = "postman">Postman</a>
+我粗略概括为 3 个问题：
+1. 如何判断接口是否请求成功？
+2. 如何进行接口批量、定期测试？
+3. 如何处理依赖接口问题（比如商品下单的接口必须要求先登录）？
+1.1 功能区
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/0825e7fe-84ff-491d-b90b-9c173cd206f6)  
+1.2 脚本相关  
+responseCode ：包含请求的返回的状态信息(如：code)。  
+responseBody：为接口请求放回的数据内容（类型为字符串）。  
+tests ：为键值对形式，用于表示我们的测试结果是成功与否，最终展示在 Test Results 中。  
+responseTime ：请求所耗时长  
+postman ：可以做的比较多，比如获取返回数据的头部信息：`postman.getResponseHeader("")`  
+1.3 代码模板(Postman using Javascript)  
+tests["Status code is 200"] = responseCode.code === 200;  
+tests["Body matches string"] = responseBody.has("这里可以改为你要判断的关键字内容");    
+tests["has access_token"] = responseBody.has("access_token");  
+2 集合(批量)测试
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/0d470af7-9a8b-4335-9a4c-09bfdd42b59b)
+2.1 批量执行
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/e41095e5-86e3-497a-b1b6-f095434cebfb)
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/c831c267-529b-4901-9ff1-31c91dc3e3f7)
+2.2 变化的参数数据
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/8a26fcbf-5976-440f-adf5-801a4d07918c)
+   使用变量
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/47e6f006-f21e-4f1f-8c92-77911269d1a6)
+   Pre-request Script  
+   Pre-request Script 与 Tests 类似，  
+   区别在于：Pre-request Script 中的脚本是在执行请求之前运行，而Tests 中的脚本则是在请求完成之后执行。  
+   "所以，我们可以在 Pre-request Script 功能区中用脚本先个上面两个变量进行赋值."  
+   //设置全局变量      
+   postman.setGlobalVariable("username", "test1");  
+   postman.setGlobalVariable("password", "123456");  
+   测试数据集  
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/adf356b1-5bfe-42ac-ba49-83cf760c0394)  
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/edaa4c46-108f-4f8c-9269-3093b0f033fa)  
+2.3 定期任务
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/fd5f6871-5121-4fa3-8cc2-9d2c31144468)
+3 请求依赖问题
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/8ce29ae1-0a76-4232-9fe2-0fdb508a1e6d)
+3.1 接口执行顺序
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/21c23a72-e303-4e1f-89b3-b17b82c49b1a)
+3.1.2 自定义执行顺序
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/8a9579ea-b648-4036-a32e-839d02997aab)
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/00215d8f-006a-478b-b1fd-3854c0bb06ee)
+3.2 数据传递
+3.2.1 全局变量
+   "Postman 不仅支持代码设置全局变量的方式，它还支持可视化操作："
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/9795bba6-27a9-4bf2-b1e8-6c17831e08ba)
+   进入对应界面后，便可直接进行管理：
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/bd7dc83d-9192-4cf3-8843-43f285031676)
+3.2.2 多环境区分与切换
+   参数的创建
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/59c01328-6e3d-4b7f-9bc3-86c4bab8084d)  
+   我在每个环境中都创建了一个 host 参数，如：
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/8f93b522-3b8a-4eae-ab86-151a9ef77254)
+   使用与切换
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/11602b07-3d44-4f6b-9176-cd310822d623)
+3.3 解决依赖问题
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/48b0d9a6-a2e7-4495-9196-2c9e2cd9800d)
+   Postman 中的操作
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/39a9d7a5-8428-41a6-adef-064ec0bc5a80)
+   ![image](https://github.com/zodiacie/Automation/assets/57634982/a470bd4b-7523-45a4-85dd-7cbbca92643a)
