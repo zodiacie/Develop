@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.Dao.UsersDao">
+    <select id="selectAll" resultType="com.example.demo.Pojo.Users">
+        select * from users
+    </select>
+
+    <select id="select" resultType="com.example.demo.Pojo.Users">
+        SELECT DISTINCT * FROM USERS WHERE USERNAME = #{USERNAME}
+    </select>
+    
+    <insert id="insert">
+        INSERT INTO USERS (USERNAME, PASSWORD, EMAIL) VALUES (#{USERNAME}, #{EMAIL}, #{PASSWORD})
+    </insert>
+ 
+    <delete id="delete">
+        DELETE FROM USERS WHERE USERNAME = #{USERNAME}
+    </delete>
+ 
+    <update id="update">
+        UPDATE USERS SET EMAIL = #{EMAIL} WHERE USERNAME = #{USERNAME}
+    </update> 
+</mapper>
