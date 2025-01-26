@@ -26,8 +26,17 @@ Devops: Git, Gitlab, Github, Jenkins, Ansible, Docker, Kubernetes setup.
 16) Type password and confirm password on the Portainer login page.  
 17) Type "sudo docker restart portainer" to restart portainer.  
 18) Login again into the Portainer docker UI page.
-
-
+19) Create Dockerfile  
+FROM openjdk:17-jdk-slim  
+WORKDIR /app  
+COPY target/demo-0.0.1-SNAPSHOT.jar app.jar  
+EXPOSE 8081  
+ENV NACOS_SERVER_ADDR="192.168.1.130:8848"  
+ENV SPRING_PROFILES_ACTIVE="docker"  
+ENTRYPOINT ["java", "-jar", "app.jar"]
+20) Open a terminal and navigate to the directory containing the Dockerfile  
+21) Run command: "docker build -t your-image-name(like demo02) ." ".: Indicates the current directory as the build context."
+22) Once the image is built, you can run a container based on it. Run command: "docker run -d -p 8080:80 --name your-container-name your-image-name" to create docker container.
 
 <a name = "jenkins">Jenkins</a>
 1) Use Portainer to start Jenkins container
