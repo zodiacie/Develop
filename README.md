@@ -36,7 +36,7 @@ ENV SPRING_PROFILES_ACTIVE="docker"
 ENTRYPOINT ["java", "-jar", "app.jar"]
 20) Open a terminal and navigate to the directory containing the Dockerfile  
 21) Run command: "docker build -t your-image-name(like demo02) ." ".: Indicates the current directory as the build context."
-22) Once the image is built, you can run a container based on it. Run command: "docker run -d -p 8081(local port):8081(docker port) --name your-container-name your-image-name" to create docker container.
+22) Once the image is built, you can run a container based on it. Run command: "docker run -d(Runs the container in detached mode (in the background)) -p 8081(host port):8081(docker port) --name your-container-name your-image-name" to create docker container.
 
 <a name = "jenkins">Jenkins</a>
 1) Use Portainer to start Jenkins container
