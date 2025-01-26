@@ -48,14 +48,17 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 4) Type "exit" to quit docker root user.
 4) Go to "/var/jenkins_home/secrets/initialAdminPassword" to get password.
 5) Paste password and click on "Sugguest Plugins" to setup Jenkins. Usually Username: admin, Password: Zxcv!23456
-
+6) Attach the Jenkinsfile.yaml in the branch.
+7) Go to Jenkins plugins and install "Pipeline As Yaml Plugin for Jenkins"
+8) ![image](https://github.com/user-attachments/assets/33b09efe-b2db-49d0-a4a8-ac857a64b92c)
+9) ![image](https://github.com/user-attachments/assets/c0cf43a8-c872-44ff-aabe-7b7a8dd3928c)
+10) ![image](https://github.com/user-attachments/assets/27003153-43fd-41c3-b65c-13de99c5026b)
 
 <a name = "ansible">Ansible</a>
 1) sudo apt-add-repository ppa:ansible/ansible
 2) sudo apt update
 3) sudo apt install ansible
 4) ansible --version to check if it's installed correctly.
-
 
 <a name = "gitlab">Gitlab</a>
 1) VMWare Requirements: 4G RAM, 2 Core Processor
