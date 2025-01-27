@@ -70,9 +70,9 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 5) Paste password and click on "Sugguest Plugins" to setup Jenkins. Usually Username: admin, Password: Zxcv!23456
 6) Attach the Jenkinsfile.yaml in the branch.
 7) Go to Jenkins plugins and install "Pipeline As Yaml Plugin for Jenkins"
-8) ![image](https://github.com/user-attachments/assets/33b09efe-b2db-49d0-a4a8-ac857a64b92c)
-9) ![image](https://github.com/user-attachments/assets/c0cf43a8-c872-44ff-aabe-7b7a8dd3928c)
-10) ![image](https://github.com/user-attachments/assets/27003153-43fd-41c3-b65c-13de99c5026b)
+8) Select "Pipeline" from "New Item" link.
+9) ![image](https://github.com/user-attachments/assets/1a500c6f-1d4b-4a12-aca9-aea75e7c24c3)
+10) ![image](https://github.com/user-attachments/assets/0597dd8a-24da-4fdf-a53d-b39fe71388a2)
 
 <a name = "ansible">Ansible</a>
 1) sudo apt-add-repository ppa:ansible/ansible
