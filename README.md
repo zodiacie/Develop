@@ -7,23 +7,27 @@
 Devops: Git, Gitlab, Github, Jenkins, Ansible, Docker, Kubernetes setup.  
 
 <a name = "kubernetes">Kubernetes</a>  
-1) sudo apt update && sudo apt upgrade -y  
-2) sudo apt install -y containerd.io  
-3) echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.30/deb/ /" | sudo tee /etc/apt/sources.list.d/kubernetes.list  
-4) curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg  
-5) sudo apt update  
-6) sudo apt install -y kubelet kubeadm kubectl  
-7) sudo apt-mark hold kubelet kubeadm kubectl  
-8) sudo swapoff -a  
-9) sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab  
-10) sudo kubeadm init --pod-network-cidr=10.244.0.0/16  
-11) mkdir -p $HOME/.kube  
-12) sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config  
-13) sudo chown $(id -u):$(id -g) $HOME/.kube/config  
-14) Alternatively, if you are the root user, you can run: export KUBECONFIG=/etc/kubernetes/admin.conf  
-15) Run “kubectl apply -f [podnetwork].yaml” with one of the options listed at: https://kubernetes.io/docs/concepts/cluster-administration/addons/  
-16) Go to master node and run docker container: kubectl create depolyment pod-name --image=docker-image-name  
-17) Docker container should be deployed to work-node host machine.  
+1) sudo apt update
+2) sudo apt upgrade -y  
+3) sudo apt install -y containerd.io
+4) sudo rm /etc/containerd/config.toml
+5) sudo systemctl restart containerd
+6) echo "deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.30/deb/ /" | sudo tee /etc/apt/sources.list.d/kubernetes.list  
+7) curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg  
+8) sudo apt update  
+9) sudo apt install -y kubelet kubeadm kubectl  
+10) sudo apt-mark hold kubelet kubeadm kubectl  
+11) sudo swapoff -a  
+12) sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+13) sudo systemctl restart containerd
+14) sudo kubeadm init --pod-network-cidr=10.244.0.0/16  
+15) mkdir -p $HOME/.kube  
+16) sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config  
+17) sudo chown $(id -u):$(id -g) $HOME/.kube/config  
+18) If you are the root user, you can run"export KUBECONFIG=/etc/kubernetes/admin.conf"  
+19) Run “kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml” for network CNI plugin install.
+20) Go to master node and run docker container: kubectl create depolyment pod-name --image=docker-image-name  
+21) Docker container should be deployed to work-node host machine.  
 
 <a name = "docker">Docker + Portainer</a>  
 1) Type "sudo apt-get update" to update  
