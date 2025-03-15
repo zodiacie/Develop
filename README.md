@@ -26,8 +26,9 @@ Devops: Git, Gitlab, Github, Jenkins, Ansible, Docker, Kubernetes setup.
 17) sudo chown $(id -u):$(id -g) $HOME/.kube/config  
 18) If you are the root user, you can run"export KUBECONFIG=/etc/kubernetes/admin.conf"  
 19) Run “kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml” for network CNI plugin install.
-20) Go to master node and run docker container: kubectl create depolyment pod-name --image=docker-image-name  
-21) Docker container should be deployed to work-node host machine.  
+20) Run "kubeadm token create --print-join-command" to create work node join token.
+21) Go to master node and run docker container: kubectl create depolyment pod-name --image=docker-image-name  
+22) Docker container should be deployed to work-node host machine.  
 
 <a name = "docker">Docker + Portainer</a>  
 1) Type "sudo apt-get update" to update  
