@@ -28,7 +28,8 @@ Devops: Git, Gitlab, Github, Jenkins, Ansible, Docker, Kubernetes setup.
 19) Run “kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml” for network CNI plugin install.
 20) Run "kubeadm token create --print-join-command" to create work node join token.
 21) Go to master node and run docker container: kubectl create depolyment pod-name --image=docker-image-name  
-22) Docker container should be deployed to work-node host machine.  
+22) Docker container should be deployed to work-node host machine.
+kubeadm join 192.168.28.128:6443 --token yxcead.tlmipfe8he4al97p --discovery-token-ca-cert-hash sha256:0a57c6227f21419d758fa033493686f05f600594971426bc6e97ced89db9656c 
 
 <a name = "docker">Docker + Portainer</a>  
 1) Type "sudo apt-get update" to update  
